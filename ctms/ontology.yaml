@@ -1,0 +1,282 @@
+ontology_name: CORIVA
+version: "0.4.0"
+
+metadata:
+  description: >
+    Semantic ontology for CORIVA causal branching and counterfactual evaluation.
+    This file defines labels, relations, and semantic constraints only.
+  source_of_truth_policy:
+    - "No runtime bounds here."
+    - "No evaluator gate toggles here."
+    - "No timing or aggregation policy here."
+    - "All runtime/evaluator configuration belongs to ctms_config.yaml."
+
+terminal_event_types:
+  - safe_stop
+  - collision
+  - out_of_bounds
+
+event_type:
+  - observed_state
+  - maintain_course
+  - lane_follow
+  - ego_brake
+  - ego_steer
+  - ego_accelerate
+  - ego_combined_maneuver
+  - npc_brake
+  - npc_cut_in
+  - npc_yield
+  - pedestrian_cross
+  - cyclist_cross
+  - obstacle_appear
+  - near_miss
+  - collision
+  - safe_stop
+  - out_of_bounds
+
+action_type:
+  brake:
+    - ego_emergency_brake
+    - ego_comfortable_brake
+    - ego_panic_brake
+
+  steer:
+    - ego_swerve_left
+    - ego_swerve_right
+
+  combined:
+    - ego_brake_and_swerve_left
+    - ego_brake_and_swerve_right
+
+  accelerate:
+    - ego_accelerate_pass
+    - ego_accelerate_escape
+
+  passive:
+    - ego_no_action
+    - ego_decelerate_coast
+
+intervention_type:
+  ego_forced_action:
+    - do_ego_emergency_brake
+    - do_ego_comfortable_brake
+    - do_ego_panic_brake
+    - do_ego_swerve_left
+    - do_ego_swerve_right
+    - do_ego_brake_and_swerve_left
+    - do_ego_brake_and_swerve_right
+    - do_ego_accelerate_pass
+    - do_ego_accelerate_escape
+    - do_ego_no_action
+    - do_ego_decelerate_coast
+
+  environment_action:
+    - npc_sudden_brake
+    - npc_cut_in_left
+    - npc_cut_in_right
+    - pedestrian_enters_road
+    - cyclist_enters_road
+    - obstacle_sudden_appearance
+
+role_type:
+  - ego_agent
+  - lead_vehicle
+  - adjacent_vehicle
+  - rear_vehicle
+  - crossing_actor
+  - obstacle_actor
+  - impacted_actor
+  - static_barrier
+  - lane_reference
+  - road_boundary
+
+entity_type:
+  dynamic:
+    - ego_vehicle
+    - vehicle
+    - truck
+    - bus
+    - motorcycle
+    - bicycle
+    - pedestrian
+
+  static:
+    - guardrail
+    - curb
+    - traffic_cone
+    - barrier
+    - parked_vehicle
+    - road_edge
+    - lane_marking
+    - crosswalk
+    - traffic_light
+    - traffic_sign
+
+event_constraints:
+  maintain_course:
+    requires_action_type: true
+    allowed_action_types:
+      - ego_no_action
+      - ego_decelerate_coast
+
+  lane_follow:
+    requires_action_type: true
+    allowed_action_types:
+      - ego_no_action
+      - ego_decelerate_coast
+
+  ego_brake:
+    requires_action_type: true
+    allowed_action_types:
+      - ego_emergency_brake
+      - ego_comfortable_brake
+      - ego_panic_brake
+
+  ego_steer:
+    requires_action_type: true
+    allowed_action_types:
+      - ego_swerve_left
+      - ego_swerve_right
+
+  ego_accelerate:
+    requires_action_type: true
+    allowed_action_types:
+      - ego_accelerate_pass
+      - ego_accelerate_escape
+
+  ego_combined_maneuver:
+    requires_action_type: true
+    allowed_action_types:
+      - ego_brake_and_swerve_left
+      - ego_brake_and_swerve_right
+
+terminal_constraints:
+  collision:
+    required_field: terminal
+    enforced_value: true
+    must_be_last_node: true
+
+  safe_stop:
+    required_field: terminal
+    enforced_value: true
+    must_be_last_node: true
+
+  out_of_bounds:
+    required_field: terminal
+    enforced_value: true
+    must_be_last_node: true
+
+required_roles:
+  observed_state:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  maintain_course:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  lane_follow:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  ego_brake:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  ego_steer:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  ego_accelerate:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  ego_combined_maneuver:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  npc_brake:
+    lead_vehicle:
+      allowed_entity_types: [vehicle, truck, bus, motorcycle]
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  npc_cut_in:
+    adjacent_vehicle:
+      allowed_entity_types: [vehicle, truck, bus, motorcycle]
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  npc_yield:
+    lead_vehicle:
+      allowed_entity_types: [vehicle, truck, bus, motorcycle]
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  pedestrian_cross:
+    crossing_actor:
+      allowed_entity_types: [pedestrian]
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  cyclist_cross:
+    crossing_actor:
+      allowed_entity_types: [bicycle]
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  obstacle_appear:
+    obstacle_actor:
+      allowed_entity_types: [traffic_cone, barrier, parked_vehicle]
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  near_miss:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+    impacted_actor:
+      allowed_entity_types: [vehicle, truck, bus, motorcycle, bicycle, pedestrian]
+
+  collision:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+    impacted_actor:
+      allowed_entity_types: [vehicle, truck, bus, motorcycle, bicycle, pedestrian, guardrail, curb, barrier, parked_vehicle]
+
+  safe_stop:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+
+  out_of_bounds:
+    ego_agent:
+      allowed_entity_types: [ego_vehicle]
+    road_boundary:
+      allowed_entity_types: [road_edge, curb, guardrail]
+
+synonyms:
+  event_type:
+    emergency_brake: ego_brake
+    hard_brake: ego_brake
+    swerve: ego_steer
+    accelerate: ego_accelerate
+    brake_and_swerve: ego_combined_maneuver
+    stop_safely: safe_stop
+    crash: collision
+
+  action_type:
+    brake_hard: ego_emergency_brake
+    brake_soft: ego_comfortable_brake
+    slam_brake: ego_panic_brake
+    turn_left: ego_swerve_left
+    turn_right: ego_swerve_right
+    keep_going: ego_no_action
+    coast: ego_decelerate_coast
+
+  entity_type:
+    car: vehicle
+    ego: ego_vehicle
+    person: pedestrian
+    walker: pedestrian
+    bike: bicycle
+    railing: guardrail

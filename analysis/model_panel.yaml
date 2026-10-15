@@ -1,0 +1,128 @@
+# Authoritative CORIVA model-panel and inference-protocol manifest.
+#
+# Step 2 pins identities and the common experiment contract. Step 3 implements
+# every adapter; `runtime_ready` remains false until the Step 4 smoke gate
+# verifies all three input conditions. The matrix runner refuses to execute an
+# unready configuration, preventing a checkpoint from silently using the wrong
+# chat template or thinking mode.
+
+panel_version: coriva-model-panel-1.2
+protocol_version: coriva-protocol-1.0
+scorer_version: ctms-scorer-1.3
+metadata_verified_on: "2026-08-17"
+
+runtime_environment:
+  transformers_repository: https://github.com/huggingface/transformers.git
+  transformers_revision: 116224175191c9e77411a71849262595cb80f936
+  weight_dtype: bfloat16
+
+input_contract:
+  observed_frame_count: 8
+  observed_frame_timestamps_sec: [-3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -0.5, 0.0]
+  conditions: [video, history_json, video_history]
+  ordered_image_inputs: true
+  mp4_resampling_allowed: false
+
+generation_contract:
+  decoding: greedy
+  temperature: 0.0
+  run_ids: [0]
+  max_output_tokens: 65536   # thinking included; raised from 32768 in panel 1.2
+  thinking_trace_storage: separate_artifact
+  scorer_input: final_json_only
+
+reporting_contract:
+  dataset_splits_reported_separately: [carla, nuscenes]
+
+checkpoints:
+  - key: qwen3-vl-8b-instruct
+    model_id: Qwen/Qwen3-VL-8B-Instruct
+    source: huggingface
+    revision: 0c351dd01ed87e9c1b53cbc748cba10e6187ff3b
+    license: Apache-2.0
+    gated: false
+    backend: local
+    adapter: qwen3_vl
+
+  - key: cosmos-reason2-8b
+    model_id: nvidia/Cosmos-Reason2-8B
+    base_checkpoint: qwen3-vl-8b-instruct
+    source: huggingface
+    revision: a9fae2cf89dc64db96b12860417f0eb403013bb9
+    license: NVIDIA-Open-Model-License
+    gated: true
+    backend: local
+    adapter: cosmos_reason2
+
+  - key: qwen3.5-9b
+    model_id: Qwen/Qwen3.5-9B
+    source: huggingface
+    revision: c202236235762e1c871ad0ccb60c8ee5ba337b9a
+    license: Apache-2.0
+    gated: false
+    backend: local
+    adapter: qwen35
+
+  - key: molmo2-8b
+    model_id: allenai/Molmo2-8B
+    source: huggingface
+    revision: e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b
+    license: Apache-2.0
+    gated: false
+    backend: local
+    adapter: molmo2
+
+  - key: gemini-2.5-pro
+    model_id: gemini-2.5-pro
+    source: google_api
+    revision: null
+    license: proprietary-service
+    gated: false
+    backend: gemini
+    adapter: gemini_api
+    api_version: v1beta
+    api_endpoint: "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    model_version_capture: required
+    access_date_capture: required
+
+configurations:
+  - name: qwen3-vl-8b-instruct
+    checkpoint: qwen3-vl-8b-instruct
+    inference_mode: instruct
+    role: matched_general_base_for_cosmos
+    adapter_implemented: true
+    runtime_ready: false
+    runtime_blocker: step_4_smoke_gate_pending
+
+  - name: cosmos-reason2-8b
+    checkpoint: cosmos-reason2-8b
+    inference_mode: physical_reasoning
+    role: matched_physical_reasoning_post_training
+    adapter_implemented: true
+    runtime_ready: false
+    runtime_blocker: step_4_smoke_gate_pending
+
+  - name: qwen3.5-9b-direct
+    checkpoint: qwen3.5-9b
+    inference_mode: direct
+    enable_thinking: false
+    role: newer_general_multimodal_baseline
+    adapter_implemented: true
+    runtime_ready: false
+    runtime_blocker: step_4_smoke_gate_pending
+
+  - name: molmo2-8b
+    checkpoint: molmo2-8b
+    inference_mode: default
+    role: independent_open_family_robustness_control
+    adapter_implemented: true
+    runtime_ready: false
+    runtime_blocker: step_4_smoke_gate_pending
+
+  - name: gemini-2.5-pro
+    checkpoint: gemini-2.5-pro
+    inference_mode: default
+    role: closed_model_reference
+    adapter_implemented: true
+    runtime_ready: false
+    runtime_blocker: step_4_smoke_gate_pending

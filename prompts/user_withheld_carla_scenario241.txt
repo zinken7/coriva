@@ -1,0 +1,106 @@
+## Scene
+Expected output: 3 ego-action branches and 1 target-intervention pairs
+(5 future chains in total).
+Each non-terminal chain runs for 6 steps at 0.5 s per step.
+
+The observed state at T=0 is given below (the closed world of actors — you
+must reuse ONLY these ids: ['ego', 'npc_1', 'npc_2', 'park_l1', 'park_l2', 'park_r1', 'park_r2', 'wall_l', 'wall_r', 'sign_1']; do not introduce new ids).
+
+## observed_state (T=0)
+```json
+{
+  "depth":0,
+  "timestamp":0.0,
+  "event_type":"observed_state",
+  "actors":[
+    {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":0.0,"y":0.0,"vx":9.2,"vy":-0.0,"speed":9.2,"length":4.5,"width":2.0},
+    {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":14.298,"y":-0.0,"vx":8.6,"vy":0.0,"speed":8.6,"length":4.5,"width":2.0},
+    {"id":"npc_2","entity_type":"vehicle","role_type":"adjacent_vehicle","x":22.899,"y":3.5,"vx":8.6,"vy":0.0,"speed":8.6,"length":4.5,"width":2.0},
+    {"id":"park_l1","entity_type":"parked_vehicle","role_type":"adjacent_vehicle","x":15.0,"y":-8.5,"vx":0.0,"vy":0.0,"speed":0.0,"length":4.5,"width":2.0},
+    {"id":"park_l2","entity_type":"parked_vehicle","role_type":"adjacent_vehicle","x":38.0,"y":-8.501,"vx":0.0,"vy":0.0,"speed":0.0,"length":4.5,"width":2.0},
+    {"id":"park_r1","entity_type":"parked_vehicle","role_type":"adjacent_vehicle","x":22.0,"y":8.5,"vx":0.0,"vy":0.0,"speed":0.0,"length":4.5,"width":2.0},
+    {"id":"park_r2","entity_type":"parked_vehicle","role_type":"adjacent_vehicle","x":48.0,"y":8.499,"vx":0.0,"vy":0.0,"speed":0.0,"length":4.5,"width":2.0},
+    {"id":"wall_l","entity_type":"guardrail","role_type":"static_barrier","x":32.0,"y":-12.0,"vx":0.0,"vy":0.0,"speed":0.0,"length":1.5,"width":0.5},
+    {"id":"wall_r","entity_type":"guardrail","role_type":"static_barrier","x":32.0,"y":11.999,"vx":0.0,"vy":0.0,"speed":0.0,"length":1.5,"width":0.5},
+    {"id":"sign_1","entity_type":"traffic_sign","role_type":"static_barrier","x":41.999,"y":10.5,"vx":0.0,"vy":0.0,"speed":0.0,"length":0.6,"width":0.6}
+  ]
+}
+```
+
+
+## explicit_query
+```json
+{
+  "l3_ego_actions":["do_ego_emergency_brake","do_ego_no_action","do_ego_swerve_left"],
+  "l4_interventions":[
+    {"intervention_type":"npc_sudden_brake","target_actor_id":"npc_1","trigger_depth":1}
+  ],
+  "l4_ego_policy":"do_ego_no_action"
+}
+```
+
+## Motion profiles of this scene
+Not supplied. Neither the ego actions' accelerations, nor the named actor's
+intervention magnitude, nor any other actor's future behaviour is given for
+this scene: decide them from the action names, the observations and your own
+knowledge of driving, and predict every other actor's behaviour from the
+observations.
+
+## Task — Ego-action branching
+Predict exactly one future branch for every declared scenario-applicable ego
+action in [do_ego_emergency_brake, do_ego_no_action, do_ego_swerve_left]. Do not add or omit actions. Each branch
+is a root-to-leaf chain. Exactly one branch has `is_factual: true`.
+Put each action in a separate `predicted_branches` object with a unique
+`branch_id` and that action's intervention metadata (`target_actor_id: ego`).
+The target-actor interventions belong ONLY in `predicted_counterfactuals`.
+Return all branches for the queried actions, including those leading to
+collision, rather than selecting only the most likely or safest branch.
+
+## Factual branch
+The declared action `do_ego_emergency_brake` is the FACTUAL branch: mark that branch
+`is_factual: true` and every other branch `is_factual: false`.
+It is scored like every other branch.
+
+## Task — Target-actor intervention
+For EACH intervention in [npc_sudden_brake], predict TWO chains from the same
+observed root under the same fixed ego policy `do_ego_no_action`:
+- `control_chain`: the named actor `npc_1` retains its baseline speed along its road/lane, turning with the route, with no named manoeuvre.
+  Every other actor: your prediction from the observations, under the same
+  non-target assumptions in both conditions.
+- `treated_chain`: `npc_1` applies the named intervention (its magnitude is your judgement)
+  from T=0 (`trigger_depth: 1`). Every other actor: the same assumptions as in
+  `control_chain`.
+The only intended difference between the two chains is `npc_1`'s
+behaviour. The ego keeps `do_ego_no_action` in BOTH chains, even where braking
+or steering would be sensible; its state may differ between the chains only
+through a physical interaction (a collision). Both chains are required: a
+query with one chain missing is incomplete.
+For each listed intervention, put `intervention`, `control_chain` and
+`treated_chain` together in ONE `predicted_counterfactuals` object. Never
+split control and treated into separate objects or duplicate the intervention.
+If the intervention list is empty, return an empty array for
+`predicted_counterfactuals`.
+
+## Actor identity
+Per-actor identity is FIXED — repeat these exact `entity_type`/`role_type`
+values in every `actors_update` entry, and include each of these actor ids
+exactly once in every node: ['ego', 'npc_1', 'npc_2', 'park_l1', 'park_l2', 'park_r1', 'park_r2', 'wall_l', 'wall_r', 'sign_1'].
+```json
+{
+  "ego":{"entity_type":"ego_vehicle","role_type":"ego_agent"},
+  "npc_1":{"entity_type":"vehicle","role_type":"lead_vehicle"},
+  "npc_2":{"entity_type":"vehicle","role_type":"adjacent_vehicle"},
+  "park_l1":{"entity_type":"parked_vehicle","role_type":"adjacent_vehicle"},
+  "park_l2":{"entity_type":"parked_vehicle","role_type":"adjacent_vehicle"},
+  "park_r1":{"entity_type":"parked_vehicle","role_type":"adjacent_vehicle"},
+  "park_r2":{"entity_type":"parked_vehicle","role_type":"adjacent_vehicle"},
+  "wall_l":{"entity_type":"guardrail","role_type":"static_barrier"},
+  "wall_r":{"entity_type":"guardrail","role_type":"static_barrier"},
+  "sign_1":{"entity_type":"traffic_sign","role_type":"static_barrier"}
+}
+```
+
+Before finalizing, check: exactly 3 ego-action branches;
+exactly 1 complete target-intervention pairs; correct factual flag;
+all 10 actors in every node; 6 nodes unless a terminal occurs;
+computed numbers and the node labels of the lookup table. Do not output this checklist.

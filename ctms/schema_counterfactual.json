@@ -1,0 +1,363 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "coriva/schema_counterfactual.json",
+  "title": "CORIVA Counterfactual Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "counterfactual_chain"
+  ],
+  "properties": {
+    "query_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "counterfactual_chain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "chain"
+      ],
+      "properties": {
+        "branch_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intervention": {
+          "$ref": "#/$defs/intervention"
+        },
+        "chain": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/node"
+          },
+          "description": "Maximum chain length is enforced by ctms_config.yaml bounds.D_max at runtime."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "bbox": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number",
+          "minimum": 0
+        },
+        {
+          "type": "number",
+          "minimum": 0
+        }
+      ],
+      "items": false,
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "BBox format is cx_cy_w_h. Width and height must be non-negative."
+    },
+    "actor_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "entity_type",
+        "x",
+        "y"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entity_type": {
+          "type": "string",
+          "enum": [
+            "ego_vehicle",
+            "vehicle",
+            "truck",
+            "bus",
+            "motorcycle",
+            "bicycle",
+            "pedestrian",
+            "guardrail",
+            "curb",
+            "traffic_cone",
+            "barrier",
+            "parked_vehicle",
+            "road_edge",
+            "lane_marking",
+            "crosswalk",
+            "traffic_light",
+            "traffic_sign"
+          ]
+        },
+        "role_type": {
+          "type": "string",
+          "enum": [
+            "ego_agent",
+            "lead_vehicle",
+            "adjacent_vehicle",
+            "rear_vehicle",
+            "crossing_actor",
+            "obstacle_actor",
+            "impacted_actor",
+            "static_barrier",
+            "lane_reference",
+            "road_boundary"
+          ]
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "vx": {
+          "type": "number"
+        },
+        "vy": {
+          "type": "number"
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0
+        },
+        "length": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Body extent along x in the ego frame (m), axis-aligned. Used by the kinematic-twin collision footprint."
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Body extent along y in the ego frame (m), axis-aligned. Used by the kinematic-twin collision footprint."
+        },
+        "ax": {
+          "type": "number"
+        },
+        "ay": {
+          "type": "number"
+        },
+        "heading": {
+          "type": "number"
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "active",
+            "despawned",
+            "exited",
+            "out_of_scope"
+          ]
+        }
+      }
+    },
+    "intervention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "intervention_type",
+        "target_actor_id",
+        "trigger_depth"
+      ],
+      "properties": {
+        "intervention_type": {
+          "type": "string",
+          "enum": [
+            "do_ego_emergency_brake",
+            "do_ego_comfortable_brake",
+            "do_ego_panic_brake",
+            "do_ego_swerve_left",
+            "do_ego_swerve_right",
+            "do_ego_brake_and_swerve_left",
+            "do_ego_brake_and_swerve_right",
+            "do_ego_accelerate_pass",
+            "do_ego_accelerate_escape",
+            "do_ego_no_action",
+            "do_ego_decelerate_coast",
+            "npc_sudden_brake",
+            "npc_cut_in_left",
+            "npc_cut_in_right",
+            "pedestrian_enters_road",
+            "cyclist_enters_road",
+            "obstacle_sudden_appearance",
+            "target_baseline"
+          ]
+        },
+        "target_actor_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "trigger_depth": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Upper bound is enforced by ctms_config.yaml bounds.D_max at runtime."
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "timestamp",
+        "event_type"
+      ],
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "depth": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Upper bound is enforced by ctms_config.yaml bounds.D_max at runtime."
+        },
+        "timestamp": {
+          "type": "number",
+          "minimum": 0
+        },
+        "event_type": {
+          "type": "string",
+          "enum": [
+            "observed_state",
+            "maintain_course",
+            "lane_follow",
+            "ego_brake",
+            "ego_steer",
+            "ego_accelerate",
+            "ego_combined_maneuver",
+            "npc_brake",
+            "npc_cut_in",
+            "npc_yield",
+            "pedestrian_cross",
+            "cyclist_cross",
+            "obstacle_appear",
+            "near_miss",
+            "collision",
+            "safe_stop",
+            "out_of_bounds"
+          ]
+        },
+        "action_type": {
+          "type": "string",
+          "enum": [
+            "ego_emergency_brake",
+            "ego_comfortable_brake",
+            "ego_panic_brake",
+            "ego_swerve_left",
+            "ego_swerve_right",
+            "ego_brake_and_swerve_left",
+            "ego_brake_and_swerve_right",
+            "ego_accelerate_pass",
+            "ego_accelerate_escape",
+            "ego_no_action",
+            "ego_decelerate_coast"
+          ]
+        },
+        "intervention_type": {
+          "type": "string",
+          "enum": [
+            "do_ego_emergency_brake",
+            "do_ego_comfortable_brake",
+            "do_ego_panic_brake",
+            "do_ego_swerve_left",
+            "do_ego_swerve_right",
+            "do_ego_brake_and_swerve_left",
+            "do_ego_brake_and_swerve_right",
+            "do_ego_accelerate_pass",
+            "do_ego_accelerate_escape",
+            "do_ego_no_action",
+            "do_ego_decelerate_coast",
+            "npc_sudden_brake",
+            "npc_cut_in_left",
+            "npc_cut_in_right",
+            "pedestrian_enters_road",
+            "cyclist_enters_road",
+            "obstacle_sudden_appearance",
+            "target_baseline"
+          ]
+        },
+        "terminal": {
+          "type": "boolean"
+        },
+        "actors": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/actor_state"
+          }
+        },
+        "actors_update": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/actor_state"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "event_type": {
+                "const": "observed_state"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "actors"
+            ],
+            "not": {
+              "required": [
+                "actors_update"
+              ]
+            }
+          },
+          "else": {
+            "required": [
+              "actors_update"
+            ],
+            "not": {
+              "required": [
+                "actors"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "event_type": {
+                "enum": [
+                  "collision",
+                  "safe_stop",
+                  "out_of_bounds"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "terminal"
+            ],
+            "properties": {
+              "terminal": {
+                "const": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

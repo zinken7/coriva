@@ -1,0 +1,45 @@
+scenario_id: pedestrian_crossing
+scenario_index: 1
+output_subdir: scenario_2
+scenario_type: pedestrian_collision_risk
+actor_defs:
+  ego:
+    canonical_id: ego
+    entity_type: ego_vehicle
+    default_role: ego_agent
+  walker:
+    canonical_id: npc_1
+    entity_type: pedestrian
+    default_role: crossing_actor
+    collision_role: impacted_actor
+environment_event:
+  event_type: pedestrian_crossing
+  trigger_time_sec: 3.5
+  params:
+    crossing_speed: 2.0
+critical_actor_id: npc_1
+l4_query:
+  intervention_type: pedestrian_enters_road
+  target_actor_id: npc_1
+  trigger_depth: 1
+  ego_policy: do_ego_no_action
+intervention_time_sec: 3.0
+sample_interval_sec: 0.5
+d_max: 10
+total_duration_sec: 8.0
+branches:
+  Factual_Yield:
+    is_factual: true
+    intervention_type: do_ego_comfortable_brake
+    target_actor_id: ego
+    trigger_depth: 1
+  Counterfactual_Panic_Brake:
+    is_factual: false
+    intervention_type: do_ego_panic_brake
+    target_actor_id: ego
+    trigger_depth: 1
+  Counterfactual_Swerve:
+    is_factual: false
+    intervention_type: do_ego_swerve_left
+    target_actor_id: ego
+    trigger_depth: 1

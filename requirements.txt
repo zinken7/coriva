@@ -1,0 +1,6 @@
+# CORIVA runtime dependencies (used by ctms/ctms.py and the pipeline)
+numpy==2.2.6
+scipy==1.15.3
+jsonschema==4.26.0
+PyYAML==6.0.3
+Pillow>=10.0

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CORIVA observed_state root node",
+  "type": "object",
+  "required": ["depth", "timestamp", "event_type", "actors"],
+  "properties": {
+    "depth": {"type": "integer", "const": 0},
+    "timestamp": {"type": "number"},
+    "event_type": {"type": "string", "const": "observed_state"},
+    "actors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "entity_type", "role_type", "x", "y", "vx", "vy", "speed"],
+        "properties": {
+          "id": {"type": "string"},
+          "entity_type": {"type": "string"},
+          "role_type": {"type": "string"},
+          "x": {"type": "number"},
+          "y": {"type": "number"},
+          "vx": {"type": "number"},
+          "vy": {"type": "number"},
+          "speed": {"type": "number"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

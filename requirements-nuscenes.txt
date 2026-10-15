@@ -1,0 +1,3 @@
+# nuScenes data tooling for SP3 (heavy deps: matplotlib, opencv, etc.).
+# Install only on the box that ingests nuScenes:  pip install -r requirements-nuscenes.txt
+nuscenes-devkit

@@ -1,0 +1,628 @@
+# CORIVA prediction task
+Predict the requested futures, not a recommended driving action. Complete
+both tasks for the scene that follows. The final answer must be one JSON
+object containing `predicted_branches` and `predicted_counterfactuals`.
+
+## Worked example (synthetic; not this scene)
+This fixed example teaches the output contract only. It is not a prediction
+for the images or observed state in your task. Do not copy its actors, action
+list, factual flag, numbers or outcomes into your answer.
+
+Toy assumptions: straight unobstructed road, two vehicles on y=0, no collision
+within a 3-second horizon. Sample every 0.5 s. In BOTH ego-action branches,
+npc_1 continues at 4 m/s. The factual ego action is no-action at 6 m/s;
+the other ego action brakes at -3 m/s^2 until stopped, then stays stopped.
+For the target intervention, the ego stays at 6 m/s in BOTH chains. The
+control target continues at 4 m/s; the treated target brakes at -8 m/s^2
+from T=0, reaches zero speed at 0.5 s, then stays at x=41 m.
+
+Example input:
+```json
+{
+  "observed_state":{
+    "depth":0,
+    "timestamp":0.0,
+    "event_type":"observed_state",
+    "actors":[
+      {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":0.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+      {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":40.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+    ]
+  },
+  "ego_actions":["do_ego_no_action","do_ego_comfortable_brake"],
+  "factual_action":"do_ego_no_action",
+  "target_interventions":[
+    {"intervention_type":"npc_sudden_brake","target_actor_id":"npc_1","trigger_depth":1}
+  ]
+}
+```
+Example output (complete; no omitted nodes or actors):
+```json
+{
+  "predicted_branches":[
+    {
+      "branch_id":"B1",
+      "is_factual":true,
+      "intervention":{"intervention_type":"do_ego_no_action","target_actor_id":"ego","trigger_depth":1},
+      "chain":[
+        {
+          "depth":1,
+          "timestamp":0.5,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":3.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":42.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":2,
+          "timestamp":1.0,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":6.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":44.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":3,
+          "timestamp":1.5,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":9.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":46.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":4,
+          "timestamp":2.0,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":12.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":48.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":5,
+          "timestamp":2.5,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":15.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":50.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":6,
+          "timestamp":3.0,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":18.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":52.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        }
+      ]
+    },
+    {
+      "branch_id":"B2",
+      "is_factual":false,
+      "intervention":{"intervention_type":"do_ego_comfortable_brake","target_actor_id":"ego","trigger_depth":1},
+      "chain":[
+        {
+          "depth":1,
+          "timestamp":0.5,
+          "event_type":"ego_brake",
+          "action_type":"ego_comfortable_brake",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":2.625,"y":0.0,"vx":4.5,"vy":0.0,"speed":4.5},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":42.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":2,
+          "timestamp":1.0,
+          "event_type":"ego_brake",
+          "action_type":"ego_comfortable_brake",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":4.5,"y":0.0,"vx":3.0,"vy":0.0,"speed":3.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":44.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":3,
+          "timestamp":1.5,
+          "event_type":"ego_brake",
+          "action_type":"ego_comfortable_brake",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":5.625,"y":0.0,"vx":1.5,"vy":0.0,"speed":1.5},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":46.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":4,
+          "timestamp":2.0,
+          "event_type":"safe_stop",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":6.0,"y":0.0,"vx":0.0,"vy":0.0,"speed":0.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":48.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ],
+          "terminal":true
+        }
+      ]
+    }
+  ],
+  "predicted_counterfactuals":[
+    {
+      "intervention":{"intervention_type":"npc_sudden_brake","target_actor_id":"npc_1","trigger_depth":1},
+      "control_chain":[
+        {
+          "depth":1,
+          "timestamp":0.5,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":3.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":42.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":2,
+          "timestamp":1.0,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":6.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":44.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":3,
+          "timestamp":1.5,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":9.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":46.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":4,
+          "timestamp":2.0,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":12.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":48.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":5,
+          "timestamp":2.5,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":15.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":50.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        },
+        {
+          "depth":6,
+          "timestamp":3.0,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":18.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":52.0,"y":0.0,"vx":4.0,"vy":0.0,"speed":4.0}
+          ]
+        }
+      ],
+      "treated_chain":[
+        {
+          "depth":1,
+          "timestamp":0.5,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":3.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":41.0,"y":0.0,"vx":0.0,"vy":0.0,"speed":0.0}
+          ]
+        },
+        {
+          "depth":2,
+          "timestamp":1.0,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":6.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":41.0,"y":0.0,"vx":0.0,"vy":0.0,"speed":0.0}
+          ]
+        },
+        {
+          "depth":3,
+          "timestamp":1.5,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":9.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":41.0,"y":0.0,"vx":0.0,"vy":0.0,"speed":0.0}
+          ]
+        },
+        {
+          "depth":4,
+          "timestamp":2.0,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":12.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":41.0,"y":0.0,"vx":0.0,"vy":0.0,"speed":0.0}
+          ]
+        },
+        {
+          "depth":5,
+          "timestamp":2.5,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":15.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":41.0,"y":0.0,"vx":0.0,"vy":0.0,"speed":0.0}
+          ]
+        },
+        {
+          "depth":6,
+          "timestamp":3.0,
+          "event_type":"maintain_course",
+          "action_type":"ego_no_action",
+          "actors_update":[
+            {"id":"ego","entity_type":"ego_vehicle","role_type":"ego_agent","x":18.0,"y":0.0,"vx":6.0,"vy":0.0,"speed":6.0},
+            {"id":"npc_1","entity_type":"vehicle","role_type":"lead_vehicle","x":41.0,"y":0.0,"vx":0.0,"vy":0.0,"speed":0.0}
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+The target stopping does NOT make an ego `safe_stop`: the intervention chains
+continue through 3 s with `maintain_course` / `ego_no_action`. Only the ego
+braking branch ends early, at its first `safe_stop` node at 2 s. Its optional
+`action_type` is omitted, not null. Both target chains are in ONE object.
+## End of worked example
+The actual task follows. Use its actor inventory, queries, factual contract,
+motion assumptions and horizon, even when they differ from the example.
+
+
+## Input condition: video
+Exactly 8 consecutive overlaid CAM_FRONT images are provided; no numeric trajectory history is provided.
+
+## Coordinate convention
+All positions and velocities use one fixed T0 ego frame. The ego position at
+T0 is the origin; +x is forward, +y is right, and -y is left. The axes do not
+rotate during the predicted future. These signs name sides of the T0 frame;
+a route-relative manoeuvre on a curve must be projected into both fixed axes.
+
+## ontology
+```json
+{
+  "ontology_name":"CORIVA",
+  "version":"0.4.0",
+  "metadata":{
+    "description":"Semantic ontology for CORIVA causal branching and counterfactual evaluation. This file defines labels, relations, and semantic constraints only.\n",
+    "source_of_truth_policy":["No runtime bounds here.","No evaluator gate toggles here.","No timing or aggregation policy here.","All runtime/evaluator configuration belongs to ctms_config.yaml."]
+  },
+  "terminal_event_types":["safe_stop","collision","out_of_bounds"],
+  "event_type":["observed_state","maintain_course","lane_follow","ego_brake","ego_steer","ego_accelerate","ego_combined_maneuver","npc_brake","npc_cut_in","npc_yield","pedestrian_cross","cyclist_cross","obstacle_appear","near_miss","collision","safe_stop","out_of_bounds"],
+  "action_type":{
+    "brake":["ego_emergency_brake","ego_comfortable_brake","ego_panic_brake"],
+    "steer":["ego_swerve_left","ego_swerve_right"],
+    "combined":["ego_brake_and_swerve_left","ego_brake_and_swerve_right"],
+    "accelerate":["ego_accelerate_pass","ego_accelerate_escape"],
+    "passive":["ego_no_action","ego_decelerate_coast"]
+  },
+  "intervention_type":{
+    "ego_forced_action":["do_ego_emergency_brake","do_ego_comfortable_brake","do_ego_panic_brake","do_ego_swerve_left","do_ego_swerve_right","do_ego_brake_and_swerve_left","do_ego_brake_and_swerve_right","do_ego_accelerate_pass","do_ego_accelerate_escape","do_ego_no_action","do_ego_decelerate_coast"],
+    "environment_action":["npc_sudden_brake","npc_cut_in_left","npc_cut_in_right","pedestrian_enters_road","cyclist_enters_road","obstacle_sudden_appearance"]
+  },
+  "role_type":["ego_agent","lead_vehicle","adjacent_vehicle","rear_vehicle","crossing_actor","obstacle_actor","impacted_actor","static_barrier","lane_reference","road_boundary"],
+  "entity_type":{
+    "dynamic":["ego_vehicle","vehicle","truck","bus","motorcycle","bicycle","pedestrian"],
+    "static":["guardrail","curb","traffic_cone","barrier","parked_vehicle","road_edge","lane_marking","crosswalk","traffic_light","traffic_sign"]
+  },
+  "event_constraints":{
+    "maintain_course":{
+      "requires_action_type":true,
+      "allowed_action_types":["ego_no_action","ego_decelerate_coast"]
+    },
+    "lane_follow":{
+      "requires_action_type":true,
+      "allowed_action_types":["ego_no_action","ego_decelerate_coast"]
+    },
+    "ego_brake":{
+      "requires_action_type":true,
+      "allowed_action_types":["ego_emergency_brake","ego_comfortable_brake","ego_panic_brake"]
+    },
+    "ego_steer":{
+      "requires_action_type":true,
+      "allowed_action_types":["ego_swerve_left","ego_swerve_right"]
+    },
+    "ego_accelerate":{
+      "requires_action_type":true,
+      "allowed_action_types":["ego_accelerate_pass","ego_accelerate_escape"]
+    },
+    "ego_combined_maneuver":{
+      "requires_action_type":true,
+      "allowed_action_types":["ego_brake_and_swerve_left","ego_brake_and_swerve_right"]
+    }
+  },
+  "terminal_constraints":{
+    "collision":{"required_field":"terminal","enforced_value":true,"must_be_last_node":true},
+    "safe_stop":{"required_field":"terminal","enforced_value":true,"must_be_last_node":true},
+    "out_of_bounds":{"required_field":"terminal","enforced_value":true,"must_be_last_node":true}
+  },
+  "required_roles":{
+    "observed_state":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "maintain_course":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "lane_follow":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "ego_brake":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "ego_steer":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "ego_accelerate":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "ego_combined_maneuver":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "npc_brake":{
+      "lead_vehicle":{
+        "allowed_entity_types":["vehicle","truck","bus","motorcycle"]
+      },
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "npc_cut_in":{
+      "adjacent_vehicle":{
+        "allowed_entity_types":["vehicle","truck","bus","motorcycle"]
+      },
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "npc_yield":{
+      "lead_vehicle":{
+        "allowed_entity_types":["vehicle","truck","bus","motorcycle"]
+      },
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "pedestrian_cross":{
+      "crossing_actor":{
+        "allowed_entity_types":["pedestrian"]
+      },
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "cyclist_cross":{
+      "crossing_actor":{
+        "allowed_entity_types":["bicycle"]
+      },
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "obstacle_appear":{
+      "obstacle_actor":{
+        "allowed_entity_types":["traffic_cone","barrier","parked_vehicle"]
+      },
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "near_miss":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      },
+      "impacted_actor":{
+        "allowed_entity_types":["vehicle","truck","bus","motorcycle","bicycle","pedestrian"]
+      }
+    },
+    "collision":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      },
+      "impacted_actor":{
+        "allowed_entity_types":["vehicle","truck","bus","motorcycle","bicycle","pedestrian","guardrail","curb","barrier","parked_vehicle"]
+      }
+    },
+    "safe_stop":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      }
+    },
+    "out_of_bounds":{
+      "ego_agent":{
+        "allowed_entity_types":["ego_vehicle"]
+      },
+      "road_boundary":{
+        "allowed_entity_types":["road_edge","curb","guardrail"]
+      }
+    }
+  },
+  "synonyms":{
+    "event_type":{"emergency_brake":"ego_brake","hard_brake":"ego_brake","swerve":"ego_steer","accelerate":"ego_accelerate","brake_and_swerve":"ego_combined_maneuver","stop_safely":"safe_stop","crash":"collision"},
+    "action_type":{"brake_hard":"ego_emergency_brake","brake_soft":"ego_comfortable_brake","slam_brake":"ego_panic_brake","turn_left":"ego_swerve_left","turn_right":"ego_swerve_right","keep_going":"ego_no_action","coast":"ego_decelerate_coast"},
+    "entity_type":{"car":"vehicle","ego":"ego_vehicle","person":"pedestrian","walker":"pedestrian","bike":"bicycle","railing":"guardrail"}
+  }
+}
+```
+
+## Published motion profiles of the declared actions
+Every declared EGO action is produced with the published parameters listed
+under `## Motion profiles of this scene`,
+applied from T=0, so the depth-1 state already includes 0.5 s of it.
+Longitudinal acceleration acts along the ego's direction of travel; speed
+never goes below 0 (a braking ego reaches 0 and holds). A swerve moves the
+ego sideways at 2.5 m/s (left = towards -y, right = towards +y) until it is
+one lane width (3.5 m) from its road-following path, then holds that
+offset; `vy` carries the lateral component while the offset grows and returns
+to the road-following value once held; `speed` = sqrt(vx^2 + vy^2) throughout.
+CARLA executes the swerve in the simulator as a lane change on the road: the
+offset is measured perpendicular to the road centreline at the ego's current
+position and turns with the road. Project the offset along the route's
+right unit normal into BOTH fixed T0 coordinates: delta_x = -d * sin(theta),
+delta_y = d * cos(theta). Here d is the signed offset in metres (right positive,
+left negative); theta is the route heading relative to the T0 +x axis,
+positive towards +y. Add these components to the centreline position at the
+same route progress; do not add d directly to the T0 y coordinate.
+For example, at theta = 60 degrees a right offset d = 3.5 m contributes
+delta_x = -3.031 m and delta_y = 1.75 m.
+Follow these values; a branch that brakes or steers at another rate is a
+different prediction from the reference.
+
+## OUTPUT CONTRACT (strict — schema-validated, one JSON object)
+Use the structure of the complete example, with the ACTUAL task's data.
+- Top-level keys: `predicted_branches`, `predicted_counterfactuals`.
+- Each ego-action branch: `branch_id`, `is_factual`, `intervention`, `chain`.
+- Each target-intervention pair: `intervention`, `control_chain`, `treated_chain`.
+- Each intervention: `intervention_type`, `target_actor_id`, `trigger_depth`.
+- Each future node: `depth`, `timestamp`, `event_type`, `actors_update`, plus
+  `action_type` for a non-terminal node or `terminal: true` for a terminal.
+- Each `actors_update` is an ARRAY of full actor objects, not a dictionary
+  keyed by actor id and not a list of changes. Include each actual actor id
+  exactly once.
+- For each actor output `id`, `entity_type`, `role_type`, `x`, `y`, `vx`,
+  `vy`, `speed`. Do not copy input-only metadata such as `source_instance_token`.
+
+All numeric values must be computed finite JSON numbers. For example, output
+`1.35`, not `2.7 * 0.5`, `"1.35"`, NaN or Infinity. No formulas,
+comments, placeholders, ellipses, "same as above", or null values. When an
+optional field is not applicable, omit the key; never set `action_type` to
+null or an object. Omit `action_type` on collision nodes; on other terminal
+nodes it may be omitted. Do not echo the observed root as a future node.
+Lay out the JSON like the JSON in this prompt: write every object that holds
+no nested object or array (each actor, each `intervention`) on one line
+without spaces, and put every other key and array element on its own line.
+Never spread an actor's fields over several lines. Still include every
+required branch, chain, node and actor. Return no explanation or reasoning
+transcript in the final answer.
+
+## Node label lookup (non-terminal nodes only)
+Use the row for the branch's EGO action. Both target-intervention chains use
+the no-action row. A target manoeuvre never changes this row. Terminal events
+take precedence and follow rules 4-6 below.
+
+| Declared ego action | `event_type` | `action_type` |
+| --- | --- | --- |
+| do_ego_no_action | maintain_course | ego_no_action |
+| do_ego_decelerate_coast | maintain_course | ego_decelerate_coast |
+| do_ego_emergency_brake | ego_brake | ego_emergency_brake |
+| do_ego_comfortable_brake | ego_brake | ego_comfortable_brake |
+| do_ego_panic_brake | ego_brake | ego_panic_brake |
+| do_ego_swerve_left | ego_steer | ego_swerve_left |
+| do_ego_swerve_right | ego_steer | ego_swerve_right |
+| do_ego_brake_and_swerve_left | ego_combined_maneuver | ego_brake_and_swerve_left |
+| do_ego_brake_and_swerve_right | ego_combined_maneuver | ego_brake_and_swerve_right |
+| do_ego_accelerate_pass | ego_accelerate | ego_accelerate_pass |
+| do_ego_accelerate_escape | ego_accelerate | ego_accelerate_escape |
+
+Full schema `event_type` vocabulary (for reference, NOT a menu of labels to
+choose freely for this task; the lookup above and terminal rules govern):
+maintain_course, lane_follow, ego_brake, ego_steer, ego_accelerate, ego_combined_maneuver, npc_brake, npc_cut_in, npc_yield, pedestrian_cross, cyclist_cross, obstacle_appear, near_miss, collision, safe_stop, out_of_bounds
+
+Allowed `action_type` labels (exact strings, nothing else):
+ego_emergency_brake, ego_comfortable_brake, ego_panic_brake, ego_swerve_left, ego_swerve_right, ego_brake_and_swerve_left, ego_brake_and_swerve_right, ego_accelerate_pass, ego_accelerate_escape, ego_no_action, ego_decelerate_coast
+
+Terminal `event_type` labels: safe_stop, collision, out_of_bounds. The references
+only ever end with `collision` or `safe_stop`; `out_of_bounds` is in the
+vocabulary but no reference uses it, so a chain ending in it can never match.
+Describe an off-road outcome through the states and end the chain at the
+horizon, or with the collision that follows.
+
+## Rules
+1. Reuse only the observed actor ids; never invent ids or change an actor's
+   `entity_type`/`role_type`. One exception: on a `collision` node, the
+   actor(s) the ego collides with carry `"role_type": "impacted_actor"`.
+   Every actors_update entry carries `id`, `entity_type`, `role_type`, `x`,
+   `y`, `vx`, `vy`, `speed`. EVERY node is a full snapshot: it lists every
+   actor of the observed state, including actors that do not move (repeat
+   their state). An actor missing from a node scores zero for that node,
+   and the named target must be present from the first node onwards in both
+   the control and the treated chain.
+2. Depth increases by 1 and timestamps are exactly 0.5, 1.0, 1.5, …
+   (depth × 0.5 s after T=0). A chain has 6 steps unless a terminal
+   event ends it earlier; a terminal event may occur at depth 1.
+3. Keep positions and velocities consistent from the T=0 state onwards.
+   `vx`, `vy` and `speed` (= sqrt(vx^2 + vy^2)) are the instantaneous values
+   at the node's timestamp; the displacement over each 0.5 s step must agree
+   with the average velocity over that step (with the published acceleration,
+   a braking ego moves less than speed × 0.5 s). The checked bounds are
+   |acceleration| <= 10 m/s^2, speed <= 45 m/s and <= 25 m per step. All
+   coordinates are the fixed T=0 ego frame, which does not rotate: a vehicle
+   on a curved road or a swerving ego has nonzero `vy`; do not force `vy` to
+   0. Crossing pedestrians/cyclists have nonzero `vy`.
+4. Omit the `terminal` field on non-terminal nodes; set `"terminal": true`
+   only on the final node when `event_type` is a terminal label. Reaching
+   the end of the horizon is not a terminal event.
+5. `collision`: the collision node is the last sampled state AT OR BEFORE
+   contact. If contact falls between two samples, the node is the earlier
+   sample: report the actors' states at that timestamp (not yet
+   overlapping) and label it `collision` because contact happens within the
+   following 0.5 s. If contact falls exactly on a sample, that sample is the
+   collision node and its states are at contact. Mark the actor(s) hit as
+   `impacted_actor` and omit `action_type` on collision nodes. Only a
+   contact inside the horizon is a collision: if you expect contact after
+   the last sample, do not label the last sample `collision`; end the chain
+   at the horizon without a terminal event.
+6. `safe_stop`: only when NO collision occurs within the horizon (a
+   collision inside the horizon always takes precedence, also for a stopped
+   ego that another actor hits: then the chain ends with `collision`), the
+   ego is at or below 0.5 m/s at that node and stays at or below it at
+   every later step of the horizon. Label the FIRST such node `safe_stop`
+   and end the chain there; do not keep emitting stopped nodes. A stop
+   followed by motion is not a terminal event; keep predicting the motion
+   instead.
+7. `event_type` on every node names what the EGO is doing at that step, or a
+   terminal event; it never names another actor's behaviour. On every
+   NON-terminal node, use `maintain_course` with `action_type: ego_no_action`
+   for the no-action branch and for BOTH intervention chains (the ego keeps its fixed
+   no-action policy in the control and in the treated chain). A terminal node follows
+   rules 4-6 instead: `collision`, `safe_stop` or `out_of_bounds`, with no
+   `action_type` on a collision node. For the other ego actions the label of
+   every non-terminal node follows the action: a brake action (`ego_emergency_brake`,
+   `ego_comfortable_brake`, `ego_panic_brake`) is `ego_brake`; a swerve
+   (`ego_swerve_left`, `ego_swerve_right`) is `ego_steer`; an acceleration
+   (`ego_accelerate_pass`, `ego_accelerate_escape`) is `ego_accelerate`; a
+   brake-and-swerve is `ego_combined_maneuver`; `ego_decelerate_coast` is
+   `maintain_course`. Do not use `lane_follow`, `npc_brake`, `npc_cut_in`,
+   `npc_yield`, `pedestrian_cross`, `cyclist_cross`, `obstacle_appear` or
+   `near_miss`: the other actor's event is expressed only by the
+   `intervention` object and by its states in `actors_update`. A node whose
+   `event_type` differs from the reference convention scores zero.
+8. Output ONLY the JSON object — no prose outside the single JSON block.

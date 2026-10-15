@@ -1,0 +1,18 @@
+# Heavy deps for running LOCAL VLM baselines (Qwen3-VL etc.) on a GPU node.
+# Kept OUT of requirements.txt so the scoring/dataset code stays lightweight and
+# CI/tests run without a GPU stack. Install into the models env on Kaya:
+#   module load Anaconda3 cuda
+#   conda create -p /group/<project>/conda_environments/coriva-models python=3.11
+#   conda activate /group/<project>/conda_environments/coriva-models
+#   pip install -r requirements-models.txt   # (on the LOGIN node — has internet)
+#
+# Qwen3.5 currently requires Transformers main. Pin the exact reviewed commit;
+# never install a moving branch on the benchmark environment.
+transformers @ git+https://github.com/huggingface/transformers.git@116224175191c9e77411a71849262595cb80f936
+accelerate>=0.34
+torch>=2.4
+torchvision
+pillow
+einops
+# Optional — faster, lower-memory multi-frame attention (needs matching CUDA):
+# flash-attn

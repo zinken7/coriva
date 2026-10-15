@@ -1,0 +1,1225 @@
+{
+  "scenario_id": "high_speed_following",
+  "scenario_type": "rear_end_collision_risk",
+  "observed_state": {
+    "depth": 0,
+    "timestamp": 3.5,
+    "event_type": "observed_state",
+    "actors": [
+      {
+        "id": "ego",
+        "entity_type": "ego_vehicle",
+        "role_type": "ego_agent",
+        "x": 319.053,
+        "y": -354.138,
+        "vx": 19.3,
+        "vy": 0.0,
+        "speed": 19.3,
+        "length": 4.5,
+        "width": 2.0
+      },
+      {
+        "id": "npc_1",
+        "entity_type": "vehicle",
+        "role_type": "lead_vehicle",
+        "x": 347.99,
+        "y": -332.568,
+        "vx": 15.2,
+        "vy": 0.0,
+        "speed": 15.2,
+        "length": 4.5,
+        "width": 2.0
+      }
+    ]
+  },
+  "environment_event": {
+    "event_type": "npc_sudden_brake",
+    "trigger_time_sec": 3.5,
+    "params": {
+      "deceleration": 8.0
+    }
+  },
+  "intervention_time_sec": 3.5,
+  "sample_interval_sec": 0.45,
+  "d_max": 10,
+  "total_duration_sec": 8.0,
+  "branches": [
+    {
+      "branch_id": "Factual_AEB",
+      "is_factual": true,
+      "intervention": {
+        "intervention_type": "do_ego_emergency_brake",
+        "target_actor_id": "ego",
+        "trigger_depth": 1
+      },
+      "chain": [
+        {
+          "depth": 1,
+          "timestamp": 3.95,
+          "event_type": "ego_brake",
+          "action_type": "ego_emergency_brake",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 326.456,
+              "y": -349.764,
+              "vx": 15.8,
+              "vy": 0.0,
+              "speed": 15.8,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 352.505,
+              "y": -328.034,
+              "vx": 11.2,
+              "vy": 0.0,
+              "speed": 11.2,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "timestamp": 4.4,
+          "event_type": "ego_brake",
+          "action_type": "ego_emergency_brake",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 331.14,
+              "y": -346.659,
+              "vx": 13.0,
+              "vy": 0.0,
+              "speed": 13.0,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 355.002,
+              "y": -325.33,
+              "vx": 8.0,
+              "vy": 0.0,
+              "speed": 8.0,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "timestamp": 4.85,
+          "event_type": "ego_brake",
+          "action_type": "ego_emergency_brake",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 334.793,
+              "y": -344.032,
+              "vx": 10.2,
+              "vy": 0.0,
+              "speed": 10.2,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 356.589,
+              "y": -323.53,
+              "vx": 4.8,
+              "vy": 0.0,
+              "speed": 4.8,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "timestamp": 5.3,
+          "event_type": "ego_brake",
+          "action_type": "ego_emergency_brake",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 338.005,
+              "y": -341.565,
+              "vx": 6.7,
+              "vy": 0.0,
+              "speed": 6.7,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 357.37,
+              "y": -322.618,
+              "vx": 0.8,
+              "vy": 0.0,
+              "speed": 0.8,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "timestamp": 5.75,
+          "event_type": "ego_brake",
+          "action_type": "ego_emergency_brake",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 339.547,
+              "y": -340.323,
+              "vx": 3.9,
+              "vy": 0.0,
+              "speed": 3.9,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 357.37,
+              "y": -322.618,
+              "vx": 0.0,
+              "vy": 0.0,
+              "speed": 0.0,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "timestamp": 6.2,
+          "event_type": "safe_stop",
+          "action_type": "ego_emergency_brake",
+          "terminal": true,
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 340.241,
+              "y": -339.75,
+              "vx": 0.4,
+              "vy": 0.0,
+              "speed": 0.4,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 357.37,
+              "y": -322.618,
+              "vx": 0.0,
+              "vy": 0.0,
+              "speed": 0.0,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "branch_id": "Counterfactual_Distracted",
+      "is_factual": false,
+      "intervention": {
+        "intervention_type": "do_ego_no_action",
+        "target_actor_id": "ego",
+        "trigger_depth": 1
+      },
+      "chain": [
+        {
+          "depth": 1,
+          "timestamp": 3.95,
+          "event_type": "maintain_course",
+          "action_type": "ego_no_action",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 327.7,
+              "y": -348.982,
+              "vx": 20.0,
+              "vy": 0.0,
+              "speed": 20.0,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 352.505,
+              "y": -328.034,
+              "vx": 11.2,
+              "vy": 0.0,
+              "speed": 11.2,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "timestamp": 4.4,
+          "event_type": "maintain_course",
+          "action_type": "ego_no_action",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 334.288,
+              "y": -344.445,
+              "vx": 20.0,
+              "vy": 0.0,
+              "speed": 20.0,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 355.002,
+              "y": -325.33,
+              "vx": 8.0,
+              "vy": 0.0,
+              "speed": 8.0,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "timestamp": 4.85,
+          "event_type": "maintain_course",
+          "action_type": "ego_no_action",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 340.607,
+              "y": -339.54,
+              "vx": 20.0,
+              "vy": 0.0,
+              "speed": 20.0,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 356.589,
+              "y": -323.53,
+              "vx": 4.8,
+              "vy": 0.0,
+              "speed": 4.8,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "timestamp": 5.3,
+          "event_type": "maintain_course",
+          "action_type": "ego_no_action",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 348.09,
+              "y": -332.91,
+              "vx": 20.0,
+              "vy": 0.0,
+              "speed": 20.0,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 357.37,
+              "y": -322.618,
+              "vx": 0.8,
+              "vy": 0.0,
+              "speed": 0.8,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "timestamp": 5.75,
+          "event_type": "collision",
+          "terminal": true,
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 353.722,
+              "y": -327.229,
+              "vx": 20.0,
+              "vy": 0.0,
+              "speed": 20.0,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "impacted_actor",
+              "x": 357.37,
+              "y": -322.618,
+              "vx": 0.0,
+              "vy": 0.0,
+              "speed": 0.0,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "branch_id": "Counterfactual_Swerve",
+      "is_factual": false,
+      "intervention": {
+        "intervention_type": "do_ego_swerve_left",
+        "target_actor_id": "ego",
+        "trigger_depth": 1
+      },
+      "chain": [
+        {
+          "depth": 1,
+          "timestamp": 3.95,
+          "event_type": "ego_steer",
+          "action_type": "ego_swerve_left",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 328.232,
+              "y": -349.888,
+              "vx": 20.0,
+              "vy": 1.8,
+              "speed": 20.076,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 352.505,
+              "y": -328.034,
+              "vx": 11.2,
+              "vy": 0.0,
+              "speed": 11.2,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "timestamp": 4.4,
+          "event_type": "ego_steer",
+          "action_type": "ego_swerve_left",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 335.218,
+              "y": -345.93,
+              "vx": 20.0,
+              "vy": 1.8,
+              "speed": 20.076,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 355.002,
+              "y": -325.33,
+              "vx": 8.0,
+              "vy": 0.0,
+              "speed": 8.0,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "timestamp": 4.85,
+          "event_type": "ego_steer",
+          "action_type": "ego_swerve_left",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 341.969,
+              "y": -341.583,
+              "vx": 20.0,
+              "vy": 1.8,
+              "speed": 20.076,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 356.589,
+              "y": -323.53,
+              "vx": 4.8,
+              "vy": 0.0,
+              "speed": 4.8,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "timestamp": 5.3,
+          "event_type": "ego_steer",
+          "action_type": "ego_swerve_left",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 350.045,
+              "y": -335.624,
+              "vx": 20.0,
+              "vy": 1.8,
+              "speed": 20.076,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 357.37,
+              "y": -322.618,
+              "vx": 0.8,
+              "vy": 0.0,
+              "speed": 0.8,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "timestamp": 5.75,
+          "event_type": "ego_steer",
+          "action_type": "ego_swerve_left",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 355.819,
+              "y": -330.09,
+              "vx": 20.0,
+              "vy": 0.0,
+              "speed": 20.0,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 357.37,
+              "y": -322.618,
+              "vx": 0.0,
+              "vy": 0.0,
+              "speed": 0.0,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "timestamp": 6.2,
+          "event_type": "ego_steer",
+          "action_type": "ego_swerve_left",
+          "actors_update": [
+            {
+              "id": "ego",
+              "entity_type": "ego_vehicle",
+              "role_type": "ego_agent",
+              "x": 362.425,
+              "y": -322.586,
+              "vx": 20.0,
+              "vy": 0.0,
+              "speed": 20.0,
+              "length": 4.5,
+              "width": 2.0
+            },
+            {
+              "id": "npc_1",
+              "entity_type": "vehicle",
+              "role_type": "lead_vehicle",
+              "x": 357.37,
+              "y": -322.618,
+              "vx": 0.0,
+              "vy": 0.0,
+              "speed": 0.0,
+              "length": 4.5,
+              "width": 2.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counterfactuals": [
+    {
+      "intervention_type": "do_ego_no_action",
+      "counterfactual_chain": {
+        "intervention": {
+          "intervention_type": "do_ego_no_action",
+          "target_actor_id": "ego",
+          "trigger_depth": 1
+        },
+        "chain": [
+          {
+            "depth": 1,
+            "timestamp": 3.95,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 327.7,
+                "y": -348.982,
+                "vx": 20.0,
+                "vy": 0.0,
+                "speed": 20.0,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 352.505,
+                "y": -328.034,
+                "vx": 11.2,
+                "vy": 0.0,
+                "speed": 11.2,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 2,
+            "timestamp": 4.4,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 334.288,
+                "y": -344.445,
+                "vx": 20.0,
+                "vy": 0.0,
+                "speed": 20.0,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 355.002,
+                "y": -325.33,
+                "vx": 8.0,
+                "vy": 0.0,
+                "speed": 8.0,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 3,
+            "timestamp": 4.85,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 340.607,
+                "y": -339.54,
+                "vx": 20.0,
+                "vy": 0.0,
+                "speed": 20.0,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 356.589,
+                "y": -323.53,
+                "vx": 4.8,
+                "vy": 0.0,
+                "speed": 4.8,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 4,
+            "timestamp": 5.3,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 348.09,
+                "y": -332.91,
+                "vx": 20.0,
+                "vy": 0.0,
+                "speed": 20.0,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 357.37,
+                "y": -322.618,
+                "vx": 0.8,
+                "vy": 0.0,
+                "speed": 0.8,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 5,
+            "timestamp": 5.75,
+            "event_type": "collision",
+            "terminal": true,
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 353.722,
+                "y": -327.229,
+                "vx": 20.0,
+                "vy": 0.0,
+                "speed": 20.0,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "impacted_actor",
+                "x": 357.37,
+                "y": -322.618,
+                "vx": 0.0,
+                "vy": 0.0,
+                "speed": 0.0,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "intervention_type": "do_ego_swerve_left",
+      "counterfactual_chain": {
+        "intervention": {
+          "intervention_type": "do_ego_swerve_left",
+          "target_actor_id": "ego",
+          "trigger_depth": 1
+        },
+        "chain": [
+          {
+            "depth": 1,
+            "timestamp": 3.95,
+            "event_type": "ego_steer",
+            "action_type": "ego_swerve_left",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 328.232,
+                "y": -349.888,
+                "vx": 20.0,
+                "vy": 1.8,
+                "speed": 20.076,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 352.505,
+                "y": -328.034,
+                "vx": 11.2,
+                "vy": 0.0,
+                "speed": 11.2,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 2,
+            "timestamp": 4.4,
+            "event_type": "ego_steer",
+            "action_type": "ego_swerve_left",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 335.218,
+                "y": -345.93,
+                "vx": 20.0,
+                "vy": 1.8,
+                "speed": 20.076,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 355.002,
+                "y": -325.33,
+                "vx": 8.0,
+                "vy": 0.0,
+                "speed": 8.0,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 3,
+            "timestamp": 4.85,
+            "event_type": "ego_steer",
+            "action_type": "ego_swerve_left",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 341.969,
+                "y": -341.583,
+                "vx": 20.0,
+                "vy": 1.8,
+                "speed": 20.076,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 356.589,
+                "y": -323.53,
+                "vx": 4.8,
+                "vy": 0.0,
+                "speed": 4.8,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 4,
+            "timestamp": 5.3,
+            "event_type": "ego_steer",
+            "action_type": "ego_swerve_left",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 350.045,
+                "y": -335.624,
+                "vx": 20.0,
+                "vy": 1.8,
+                "speed": 20.076,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 357.37,
+                "y": -322.618,
+                "vx": 0.8,
+                "vy": 0.0,
+                "speed": 0.8,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 5,
+            "timestamp": 5.75,
+            "event_type": "ego_steer",
+            "action_type": "ego_swerve_left",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 355.819,
+                "y": -330.09,
+                "vx": 20.0,
+                "vy": 0.0,
+                "speed": 20.0,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 357.37,
+                "y": -322.618,
+                "vx": 0.0,
+                "vy": 0.0,
+                "speed": 0.0,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 6,
+            "timestamp": 6.2,
+            "event_type": "ego_steer",
+            "action_type": "ego_swerve_left",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 362.425,
+                "y": -322.586,
+                "vx": 20.0,
+                "vy": 0.0,
+                "speed": 20.0,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 357.37,
+                "y": -322.618,
+                "vx": 0.0,
+                "vy": 0.0,
+                "speed": 0.0,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "protocol": {
+    "protocol_version": "legacy",
+    "track": "primary",
+    "future_steps": 6,
+    "future_horizon_seconds": 3.0,
+    "observed_frame_count": 8,
+    "dataset": "carla",
+    "split": "carla"
+  },
+  "l4_queries": [
+    {
+      "intervention_type": "npc_sudden_brake",
+      "counterfactual_chain": {
+        "intervention": {
+          "intervention_type": "npc_sudden_brake",
+          "target_actor_id": "npc_1",
+          "trigger_depth": 1
+        },
+        "chain": [
+          {
+            "depth": 1,
+            "timestamp": 4.0,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 328.703,
+                "y": -354.138,
+                "vx": 19.3,
+                "vy": 0.0,
+                "speed": 19.3,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 354.59,
+                "y": -332.568,
+                "vx": 11.2,
+                "vy": 0.0,
+                "speed": 11.2,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 2,
+            "timestamp": 4.5,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 338.353,
+                "y": -354.138,
+                "vx": 19.3,
+                "vy": 0.0,
+                "speed": 19.3,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 359.19,
+                "y": -332.568,
+                "vx": 7.2,
+                "vy": 0.0,
+                "speed": 7.2,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 3,
+            "timestamp": 5.0,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 348.003,
+                "y": -354.138,
+                "vx": 19.3,
+                "vy": 0.0,
+                "speed": 19.3,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 361.79,
+                "y": -332.568,
+                "vx": 3.2,
+                "vy": 0.0,
+                "speed": 3.2,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 4,
+            "timestamp": 5.5,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 357.653,
+                "y": -354.138,
+                "vx": 19.3,
+                "vy": 0.0,
+                "speed": 19.3,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 362.43,
+                "y": -332.568,
+                "vx": 0.0,
+                "vy": 0.0,
+                "speed": 0.0,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 5,
+            "timestamp": 6.0,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 367.303,
+                "y": -354.138,
+                "vx": 19.3,
+                "vy": 0.0,
+                "speed": 19.3,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 362.43,
+                "y": -332.568,
+                "vx": 0.0,
+                "vy": 0.0,
+                "speed": 0.0,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          },
+          {
+            "depth": 6,
+            "timestamp": 6.5,
+            "event_type": "maintain_course",
+            "action_type": "ego_no_action",
+            "actors_update": [
+              {
+                "id": "ego",
+                "entity_type": "ego_vehicle",
+                "role_type": "ego_agent",
+                "x": 376.953,
+                "y": -354.138,
+                "vx": 19.3,
+                "vy": 0.0,
+                "speed": 19.3,
+                "length": 4.5,
+                "width": 2.0
+              },
+              {
+                "id": "npc_1",
+                "entity_type": "vehicle",
+                "role_type": "lead_vehicle",
+                "x": 362.43,
+                "y": -332.568,
+                "vx": 0.0,
+                "vy": 0.0,
+                "speed": 0.0,
+                "length": 4.5,
+                "width": 2.0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "action_audit": {
+    "declared_actions": [],
+    "enumerated_count": 3,
+    "deduplicated": true,
+    "gate": "qc_scenario_gt"
+  }
+}

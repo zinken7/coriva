@@ -1,0 +1,45 @@
+scenario_id: high_speed_following
+scenario_index: 0
+output_subdir: scenario_1
+scenario_type: rear_end_collision_risk
+actor_defs:
+  ego:
+    canonical_id: ego
+    entity_type: ego_vehicle
+    default_role: ego_agent
+  npc:
+    canonical_id: npc_1
+    entity_type: vehicle
+    default_role: lead_vehicle
+    collision_role: impacted_actor
+environment_event:
+  event_type: npc_sudden_brake
+  trigger_time_sec: 3.5
+  params:
+    deceleration: 8.0
+critical_actor_id: npc_1
+l4_query:
+  intervention_type: npc_sudden_brake
+  target_actor_id: npc_1
+  trigger_depth: 1
+  ego_policy: do_ego_no_action
+intervention_time_sec: 3.5
+sample_interval_sec: 0.45
+d_max: 10
+total_duration_sec: 8.0
+branches:
+  Factual_AEB:
+    is_factual: true
+    intervention_type: do_ego_emergency_brake
+    target_actor_id: ego
+    trigger_depth: 1
+  Counterfactual_Distracted:
+    is_factual: false
+    intervention_type: do_ego_no_action
+    target_actor_id: ego
+    trigger_depth: 1
+  Counterfactual_Swerve:
+    is_factual: false
+    intervention_type: do_ego_swerve_left
+    target_actor_id: ego
+    trigger_depth: 1

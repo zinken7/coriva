@@ -1,0 +1,1922 @@
+[
+  {
+    "time_sec": 0.0,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 252.009,
+      "y": -371.247,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 289.17,
+      "y": -365.945,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 0.1,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 254.009,
+      "y": -371.237,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 291.094,
+      "y": -365.397,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 0.2,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 256.009,
+      "y": -371.199,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 293.01,
+      "y": -364.824,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 0.3,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 258.008,
+      "y": -371.13,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 294.917,
+      "y": -364.22,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 0.4,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 260.005,
+      "y": -371.034,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 296.815,
+      "y": -363.591,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 0.5,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 262.002,
+      "y": -370.911,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 298.705,
+      "y": -362.936,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 0.6,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 263.996,
+      "y": -370.756,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 300.584,
+      "y": -362.252,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 0.7,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 265.987,
+      "y": -370.575,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 302.454,
+      "y": -361.542,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 0.8,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 267.976,
+      "y": -370.362,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 304.312,
+      "y": -360.803,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 0.9,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 269.962,
+      "y": -370.123,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 306.161,
+      "y": -360.039,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.0,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 271.943,
+      "y": -369.852,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 307.997,
+      "y": -359.247,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.1,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 273.921,
+      "y": -369.555,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 309.822,
+      "y": -358.429,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.2,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 275.895,
+      "y": -369.231,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 311.636,
+      "y": -357.587,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.3,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 277.863,
+      "y": -368.876,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 313.437,
+      "y": -356.717,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.4,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 279.826,
+      "y": -368.495,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 315.226,
+      "y": -355.822,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.5,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 281.783,
+      "y": -368.083,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 317.0,
+      "y": -354.899,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.6,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 283.735,
+      "y": -367.644,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 318.762,
+      "y": -353.953,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.7,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 285.679,
+      "y": -367.175,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 320.509,
+      "y": -352.979,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.8,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 287.617,
+      "y": -366.68,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 322.243,
+      "y": -351.982,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 1.9,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 289.548,
+      "y": -366.159,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 323.962,
+      "y": -350.961,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.0,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 291.47,
+      "y": -365.607,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 325.666,
+      "y": -349.913,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.1,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 293.385,
+      "y": -365.03,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 327.356,
+      "y": -348.843,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.2,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 295.29,
+      "y": -364.423,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 329.028,
+      "y": -347.746,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.3,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 297.188,
+      "y": -363.79,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 330.686,
+      "y": -346.627,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.4,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 299.075,
+      "y": -363.127,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 332.326,
+      "y": -345.482,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.5,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 300.953,
+      "y": -362.439,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 333.95,
+      "y": -344.315,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.6,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 302.821,
+      "y": -361.726,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 335.558,
+      "y": -343.127,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.7,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 304.678,
+      "y": -360.984,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 337.148,
+      "y": -341.913,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.8,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 306.525,
+      "y": -360.217,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 338.721,
+      "y": -340.678,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 2.9,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 308.36,
+      "y": -359.421,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 340.274,
+      "y": -339.418,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.0,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 310.184,
+      "y": -358.6,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 341.749,
+      "y": -338.189,
+      "vx": 19.2,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 69.1,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.1,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 311.995,
+      "y": -357.751,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 343.145,
+      "y": -336.99,
+      "vx": 18.4,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 66.2,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.2,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 313.794,
+      "y": -356.878,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 344.466,
+      "y": -335.827,
+      "vx": 17.6,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 63.4,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.3,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 315.581,
+      "y": -355.98,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 345.713,
+      "y": -334.701,
+      "vx": 16.8,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 60.5,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.4,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 317.354,
+      "y": -355.054,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 346.886,
+      "y": -333.613,
+      "vx": 16.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 57.6,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.5,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 319.198,
+      "y": -354.259,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 347.99,
+      "y": -332.568,
+      "vx": 15.2,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 54.7,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.6,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 321.029,
+      "y": -353.435,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 349.025,
+      "y": -331.567,
+      "vx": 14.4,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 51.8,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.7,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 322.848,
+      "y": -352.587,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 349.991,
+      "y": -330.61,
+      "vx": 13.6,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 49.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.8,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 324.656,
+      "y": -351.714,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 350.893,
+      "y": -329.701,
+      "vx": 12.8,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 46.1,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 3.9,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 326.45,
+      "y": -350.813,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 351.73,
+      "y": -328.842,
+      "vx": 12.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 43.2,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.0,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 328.232,
+      "y": -349.888,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -2,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 352.505,
+      "y": -328.034,
+      "vx": 11.2,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 40.3,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.1,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 330.0,
+      "y": -348.936,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 353.218,
+      "y": -327.276,
+      "vx": 10.4,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 37.4,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.2,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 331.754,
+      "y": -347.96,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 353.871,
+      "y": -326.572,
+      "vx": 9.6,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 34.6,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.3,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 333.493,
+      "y": -346.956,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 354.465,
+      "y": -325.923,
+      "vx": 8.8,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 31.7,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.4,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 335.218,
+      "y": -345.93,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 355.002,
+      "y": -325.33,
+      "vx": 8.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 28.8,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.5,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 336.93,
+      "y": -344.88,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 355.482,
+      "y": -324.793,
+      "vx": 7.2,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 25.9,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.6,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 338.625,
+      "y": -343.805,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 355.905,
+      "y": -324.313,
+      "vx": 6.4,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 23.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.7,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 340.305,
+      "y": -342.706,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 356.274,
+      "y": -323.892,
+      "vx": 5.6,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 20.2,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.8,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 341.969,
+      "y": -341.583,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 356.589,
+      "y": -323.53,
+      "vx": 4.8,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 17.3,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 4.9,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 343.618,
+      "y": -340.437,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 356.85,
+      "y": -323.227,
+      "vx": 4.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 14.4,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.0,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 345.249,
+      "y": -339.267,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.058,
+      "y": -322.984,
+      "vx": 3.2,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 11.5,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.1,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 346.865,
+      "y": -338.075,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.214,
+      "y": -322.801,
+      "vx": 2.4,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 8.6,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.2,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 348.464,
+      "y": -336.861,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.318,
+      "y": -322.679,
+      "vx": 1.6,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 5.8,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.3,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 350.045,
+      "y": -335.624,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.8,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 2.9,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.4,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 351.609,
+      "y": -334.365,
+      "vx": 20.0,
+      "vy": 1.75,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.5,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 353.032,
+      "y": -332.959,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.6,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 354.435,
+      "y": -331.534,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.7,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 355.819,
+      "y": -330.09,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.8,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 357.181,
+      "y": -328.626,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 5.9,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 358.524,
+      "y": -327.144,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.0,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 359.845,
+      "y": -325.642,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.1,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 361.145,
+      "y": -324.123,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.2,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 362.425,
+      "y": -322.586,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.3,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 363.682,
+      "y": -321.03,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.4,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 364.918,
+      "y": -319.458,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.5,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 366.13,
+      "y": -317.867,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.6,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 367.321,
+      "y": -316.261,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.7,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 368.489,
+      "y": -314.637,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.8,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 369.634,
+      "y": -312.997,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 6.9,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 370.757,
+      "y": -311.342,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.0,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 371.856,
+      "y": -309.671,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.1,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 372.932,
+      "y": -307.985,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.2,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 373.984,
+      "y": -306.284,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.3,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 375.012,
+      "y": -304.568,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.4,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 376.017,
+      "y": -302.839,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.5,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 376.996,
+      "y": -301.095,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.6,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 377.952,
+      "y": -299.339,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.7,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 378.882,
+      "y": -297.568,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.8,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 379.788,
+      "y": -295.785,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  },
+  {
+    "time_sec": 7.9,
+    "branch": "Counterfactual_Swerve",
+    "ego": {
+      "x": 380.67,
+      "y": -293.99,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "npc": {
+      "x": 357.37,
+      "y": -322.618,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -8.0,
+      "speed_kmh": 0.0,
+      "lane_id": -2,
+      "entity_type": "car"
+    }
+  }
+]

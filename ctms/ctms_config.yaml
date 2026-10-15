@@ -1,0 +1,215 @@
+version: "1.3.0"
+benchmark_name: "CORIVA"
+
+paths:
+  ontology_file: "ontology.yaml"
+  branch_schema_file: "schema_branch.json"
+  counterfactual_schema_file: "schema_counterfactual.json"
+
+bounds:
+  # Primary track: 3 seconds at 2 Hz. The optional challenge track overrides
+  # this to 12 nodes through the dataset protocol manifest.
+  D_max: 6
+  K_max: 8
+
+timing:
+  default_dt_seconds: 0.5
+  allow_variable_dt: true
+  timestamp_field: "timestamp"
+  dt_fallback_policy: "use_default_if_missing"
+  # Node k must carry timestamp T0 + k * default_dt. Off in the shipped
+  # default so variable-dt fixtures stay scoreable; run_benchmark and dataset
+  # QC switch it on for every coriva-protocol-1.0 reference, exactly like
+  # layer3.use_metadata_gate.
+  require_protocol_grid: false
+  protocol_grid_tolerance_seconds: 0.001
+
+canonicalization:
+  sort_keys: true
+  remove_extra_whitespace: true
+  normalize_synonyms: true
+  round_numeric_fields: true
+  derive_depth_from_chain_order: true
+  strip_metadata_fields:
+    - branch_id
+    - node_id
+    - query_id
+
+numeric_precision:
+  x: 2
+  y: 2
+  vx: 2
+  vy: 2
+  speed: 2
+  ax: 2
+  ay: 2
+  heading: 2
+  bbox: 2
+
+bbox_format: "cx_cy_w_h"
+reject_unknown_fields: true
+
+duplicate_handling:
+  deduplicate_after_canonicalization: true
+  dedup_key: "semantic_canonical_string"
+  keep_first_occurrence_metadata: true
+
+node_similarity:
+  thresholds:
+    position_distance_m: 2.0
+
+kinematic_resolution:
+  derive_speed_from_velocity: true
+  derive_speed_from_position_delta: true
+  prefer_velocity_over_speed: true
+  reject_on_internal_physics_conflict: true
+  fail_if_speed_unrecoverable: true
+  # Tolerance for instantaneous vs displacement-derived speed mismatch.
+  # Endpoint vs displacement-average speed differ by up to max|a| × dt / 2
+  # under kinematic_bounds: 10 m/s² × 0.5 s / 2 = 2.5 m/s;
+  # the existing 4.0 m/s tolerance retains headroom for rounding. Keep equal to
+  # ctms.DEFAULT_SPEED_CONFLICT_TOLERANCE.
+  speed_conflict_tolerance: 4.0
+  use_actual_dt_from_timestamps: true
+
+bbox_validation:
+  require_non_negative_size: true
+
+layer1:
+  # Sim = cat_weight * Sim_cat + (1 - cat_weight) * Sim_cont (outline 3.3).
+  # 0.5 = the original equal split; varied by the parameter-perturbation study.
+  cat_weight: 0.5
+
+layer2:
+  gamma: 0.9
+  use_bottleneck_prefix_min: true
+  pad_missing_steps_with_dummy_zero: true
+  dummy_node_similarity: 0.0
+
+layer3:
+  enabled: true
+  use_schema_gate: true
+  use_semantic_gate: true
+  use_scene_gate: true
+  use_kinematic_gate: true
+  # Enabled by run_benchmark only for versioned protocol datasets; unit and
+  # pilot artifacts without a protocol remain scoreable but do not claim
+  # final metadata compliance.
+  use_metadata_gate: false
+  # Action-labelled matching: a reference branch and a predicted branch whose
+  # ego-action labels differ receive S_pair = 0 before the Hungarian
+  # assignment, so a chain attached to the wrong action earns nothing.
+  # Branches lacking a label on either side are unconstrained.
+  match_by_action: true
+  # K_max enforcement: if unique predictions (after dedup) exceed
+  # bounds.K_max, ALL are still scored (no subset selection) and F1 is
+  # scaled by K_max / n_unique — proportional penalty, not a hard zero.
+  # Split-depth divergence tolerances: two accumulated world states count as
+  # diverged only when an actor moves beyond position_m (reuse of
+  # node_similarity's τ) or changes speed beyond speed_mps (the same 1.0
+  # floor used in the speed-similarity denominator), or any categorical
+  # field differs; exact equality on rounded values would split every real
+  # prediction at depth 1.
+  split_tolerance:
+    position_m: 2.0
+    speed_mps: 1.0
+
+split_depth:
+  use_factual_baseline: true
+  no_split_value: "D_max_plus_1"
+
+pairwise_weights:
+  lambda_chain: 0.7
+  mu_split: 0.2
+  nu_term: 0.1
+
+matching:
+  algorithm: "hungarian"
+  cost_formula: "1 - S_pair"
+  pad_with_dummy_branches: true
+  dummy_pair_score: 0.0
+  dummy_pair_cost: 1.0
+
+f1:
+  if_m_zero_precision: 0.0
+  if_precision_plus_recall_zero: 0.0
+
+scene_gate:
+  check_offroad_outside_drivable_area: true
+  check_static_boundary_crossing: true
+  # Last-resort fallback only, used when a sample has neither HD-map polygons
+  # nor scenario-local route_centerlines. CARLA protocol samples carry curved
+  # waypoint evidence; this straight T0-heading corridor serves map-free
+  # inputs and still rejects clearly off-road predictions.
+  local_drivable_half_width_m: 20.0
+
+layer4:
+  enabled: true
+  # Option B (docs/l4_pair_protocol.md): one matched control/treated PAIR per
+  # query. `valid` is pair validity; CAS is the treated-chain agreement of a
+  # pair-valid answer, else 0; the control agreement is reported separately
+  # and never enters CTMS. A second pair for the same intervention_type
+  # still invalidates that query.
+  pair_protocol: matched_control_treated
+  control_intervention_type: target_baseline
+  use_schema_gate: true
+  use_semantic_gate: true
+  # Per outline Section 6, Layer 4 applies only schema + kinematic gates.
+  # required_roles completeness is dropped here so a forced-intervention
+  # outcome (collision/off-road) is not rejected for an absent role.
+  # Structural semantic checks (hallucination, mutation, terminal, timestamp)
+  # still apply via use_semantic_gate.
+  use_role_completeness_gate: false
+  use_scene_gate: false
+  use_kinematic_gate: true
+
+aggregation:
+  level: "per_intervention"
+  scenario_reduction: "mean"
+  dataset_reduction: "mean"
+
+
+
+kinematic_bounds:
+  max_speed_mps: 45.0
+  max_accel_mps2: 10.0
+  min_decel_mps2: -10.0
+  max_displacement_per_0_5s: 25.0
+  # Timestamp manipulation guards: reject branch if dt falls outside [min, max]
+  max_dt_seconds: 2.0
+  min_dt_seconds: 0.01
+
+overall:
+  report_multi_axis_leaderboard: true
+  report_ctms_summary: true
+  formula: "sqrt(F1_cf * Score_interv)"
+
+logging:
+  save_failure_reasons: true
+  layer3_reason_codes:
+    - schema_invalid
+    - semantic_invalid
+    - scene_invalid
+    - duplicate_collapsed
+    - no_factual_branch
+    - multiple_factual_branches
+    - event_action_mismatch
+    - terminal_constraint_violation
+    - internal_physics_conflict
+    - unrecoverable_speed
+    - duplicate_actor_id
+    - timestamp_monotonicity_violation
+  layer4_reason_codes:
+    - invalid_chain_count
+    - schema_invalid
+    - semantic_invalid
+    - kinematic_invalid
+    - terminal_constraint_violation
+    - internal_physics_conflict
+    - unrecoverable_speed
+    - duplicate_actor_id
+    - timestamp_monotonicity_violation
+
+dev_mode:
+  allow_stub_scene_gate: false
+  allow_stub_kinematic_gate: false

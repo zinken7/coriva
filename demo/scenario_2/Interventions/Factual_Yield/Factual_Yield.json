@@ -1,0 +1,1922 @@
+[
+  {
+    "time_sec": 0.0,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 151.996,
+      "y": 5.291,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 0.1,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 153.996,
+      "y": 5.321,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 0.2,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 155.995,
+      "y": 5.351,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 0.3,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 157.995,
+      "y": 5.38,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 0.4,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 159.995,
+      "y": 5.41,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 0.5,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 161.995,
+      "y": 5.44,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 0.6,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 163.995,
+      "y": 5.47,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 0.7,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 165.994,
+      "y": 5.5,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 0.8,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 167.994,
+      "y": 5.53,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 0.9,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 169.994,
+      "y": 5.56,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.0,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 171.994,
+      "y": 5.589,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.1,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 173.993,
+      "y": 5.619,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.2,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 175.993,
+      "y": 5.649,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.3,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 177.993,
+      "y": 5.679,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.4,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 179.993,
+      "y": 5.709,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.5,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 181.993,
+      "y": 5.739,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.6,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 183.992,
+      "y": 5.769,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.7,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 185.992,
+      "y": 5.799,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.8,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 187.992,
+      "y": 5.828,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 1.9,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 189.992,
+      "y": 5.858,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.0,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 191.991,
+      "y": 5.888,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.1,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 193.991,
+      "y": 5.918,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.2,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 195.991,
+      "y": 5.948,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.3,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 197.991,
+      "y": 5.978,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.4,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 199.991,
+      "y": 6.008,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.5,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 201.99,
+      "y": 6.038,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.6,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 203.99,
+      "y": 6.067,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.7,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 205.99,
+      "y": 6.097,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.8,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 207.99,
+      "y": 6.127,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 2.9,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 209.989,
+      "y": 6.157,
+      "vx": 20.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 72.0,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.595,
+      "y": 21.603,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": 0.0,
+      "speed_kmh": 0.0,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.0,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 211.932,
+      "y": 6.186,
+      "vx": 19.43,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 69.9,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.395,
+      "y": 21.598,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.1,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 213.818,
+      "y": 6.214,
+      "vx": 18.86,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 67.9,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 240.195,
+      "y": 21.593,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.2,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 215.647,
+      "y": 6.242,
+      "vx": 18.29,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 65.8,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 239.995,
+      "y": 21.588,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.3,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 217.419,
+      "y": 6.268,
+      "vx": 17.72,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 63.8,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 239.796,
+      "y": 21.583,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.4,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 219.133,
+      "y": 6.294,
+      "vx": 17.15,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 61.7,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 239.596,
+      "y": 21.578,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.5,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 220.791,
+      "y": 6.318,
+      "vx": 16.58,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 59.7,
+      "lane_id": 4,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 239.396,
+      "y": 21.573,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.6,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 222.392,
+      "y": 6.342,
+      "vx": 16.01,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 57.6,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 239.196,
+      "y": 21.569,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.7,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 223.936,
+      "y": 6.365,
+      "vx": 15.44,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 55.6,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 238.996,
+      "y": 21.564,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.8,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 225.423,
+      "y": 6.388,
+      "vx": 14.87,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 53.5,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 238.796,
+      "y": 21.559,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 3.9,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 226.853,
+      "y": 6.409,
+      "vx": 14.3,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 51.5,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 238.596,
+      "y": 21.554,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.0,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 228.225,
+      "y": 6.429,
+      "vx": 13.73,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 49.4,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 238.396,
+      "y": 21.549,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.1,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 229.541,
+      "y": 6.449,
+      "vx": 13.16,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 47.4,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 238.196,
+      "y": 21.544,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.2,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 230.792,
+      "y": 6.596,
+      "vx": 12.59,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 45.3,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 237.996,
+      "y": 21.539,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.3,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 231.93,
+      "y": 6.982,
+      "vx": 12.02,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 43.3,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 237.796,
+      "y": 21.535,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.4,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 232.935,
+      "y": 7.53,
+      "vx": 11.45,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 41.2,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 237.596,
+      "y": 21.53,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.5,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 233.78,
+      "y": 8.215,
+      "vx": 10.88,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 39.2,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 237.396,
+      "y": 21.525,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.6,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.47,
+      "y": 8.981,
+      "vx": 10.31,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 37.1,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 237.196,
+      "y": 21.52,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.7,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.447,
+      "y": 9.955,
+      "vx": 9.74,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 35.1,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 236.996,
+      "y": 21.515,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.8,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.842,
+      "y": 10.782,
+      "vx": 9.17,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 33.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 236.796,
+      "y": 21.51,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 4.9,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.821,
+      "y": 11.642,
+      "vx": 8.6,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 31.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 236.596,
+      "y": 21.505,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.0,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.802,
+      "y": 12.445,
+      "vx": 8.03,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 28.9,
+      "lane_id": 1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 236.397,
+      "y": 21.5,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.1,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.823,
+      "y": 13.19,
+      "vx": 7.46,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 26.9,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 236.197,
+      "y": 21.496,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.2,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.806,
+      "y": 13.879,
+      "vx": 6.89,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 24.8,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 235.997,
+      "y": 21.491,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.3,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.791,
+      "y": 14.511,
+      "vx": 6.32,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 22.8,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 235.797,
+      "y": 21.486,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.4,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.777,
+      "y": 15.086,
+      "vx": 5.75,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 20.7,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 235.597,
+      "y": 21.481,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.5,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.764,
+      "y": 15.604,
+      "vx": 5.18,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 18.6,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 235.397,
+      "y": 21.476,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.6,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.753,
+      "y": 16.064,
+      "vx": 4.61,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 16.6,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 235.197,
+      "y": 21.471,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.7,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.743,
+      "y": 16.468,
+      "vx": 4.04,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 14.5,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 234.997,
+      "y": 21.466,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.8,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.735,
+      "y": 16.815,
+      "vx": 3.47,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 12.5,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 234.797,
+      "y": 21.462,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 5.9,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.728,
+      "y": 17.105,
+      "vx": 2.9,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 10.4,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 234.597,
+      "y": 21.457,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.0,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.722,
+      "y": 17.338,
+      "vx": 2.33,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 8.4,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 234.397,
+      "y": 21.452,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.1,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.718,
+      "y": 17.514,
+      "vx": 1.76,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 6.3,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 234.197,
+      "y": 21.447,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.2,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.715,
+      "y": 17.633,
+      "vx": 1.19,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 4.3,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 233.997,
+      "y": 21.442,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.3,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.695,
+      "vx": 0.62,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 2.2,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 233.797,
+      "y": 21.437,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.4,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.05,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.2,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 233.597,
+      "y": 21.432,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.5,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 233.397,
+      "y": 21.428,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.6,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 233.197,
+      "y": 21.423,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.7,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 232.998,
+      "y": 21.418,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.8,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 232.798,
+      "y": 21.413,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 6.9,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 232.598,
+      "y": 21.408,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.0,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 232.398,
+      "y": 21.403,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.1,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 232.198,
+      "y": 21.398,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.2,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 231.998,
+      "y": 21.394,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.3,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 231.798,
+      "y": 21.389,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.4,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 231.598,
+      "y": 21.384,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.5,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 231.398,
+      "y": 21.379,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.6,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 231.198,
+      "y": 21.374,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.7,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 230.998,
+      "y": 21.369,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.8,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 230.798,
+      "y": 21.364,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  },
+  {
+    "time_sec": 7.9,
+    "branch": "Factual_Yield",
+    "ego": {
+      "x": 234.713,
+      "y": 17.7,
+      "vx": 0.0,
+      "vy": 0.0,
+      "ax": -5.7,
+      "speed_kmh": 0.0,
+      "lane_id": -1,
+      "entity_type": "ego"
+    },
+    "walker": {
+      "x": 230.598,
+      "y": 21.359,
+      "vx": -1.999,
+      "vy": -0.049,
+      "ax": 0.0,
+      "speed_kmh": 7.2,
+      "lane_id": null,
+      "entity_type": "walker"
+    }
+  }
+]
